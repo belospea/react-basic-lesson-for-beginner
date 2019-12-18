@@ -1,8 +1,14 @@
 import React from "react";
 import MyName from "./MyName";
+import Counter from "./Counter";
 
 function App() {
-  return <MyName name="Belospea" />;
+  return (
+    <div>
+      <MyName name="Belospea" />
+      <Counter />
+    </div>
+  );
 }
 
 export default App;

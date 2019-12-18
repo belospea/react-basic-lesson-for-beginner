@@ -5,10 +5,17 @@ class Counter extends Component {
     number: 0
   };
 
-  handleIncrease = () => {
+  handleMultiple = () => {
+    const { number } = this.state;
     this.setState({
-      number: this.state.number + 1
+      number: number * 2
     });
+  };
+
+  handleIncrease = () => {
+    this.setState(state => ({
+      number: state.number + 1
+    }));
   };
 
   handleDecrease = () => {
@@ -24,6 +31,7 @@ class Counter extends Component {
         <div>Value: {this.state.number}</div>
         <button onClick={this.handleIncrease}>+</button>
         <button onClick={this.handleDecrease}>-</button>
+        <button onClick={this.handleMultiple}>*</button>
       </div>
     );
   }
